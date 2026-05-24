@@ -29,6 +29,9 @@ MULTI-SUBJECT / HPC
 CONTAINER
   /fs-docker <t1> <sid>       Docker-Wrapper (deepmi/fastsurfer)
 
+ADJACENT-TOOLS (FreeSurfer-Ecosystem)
+  /fs-nextbrain <t1> <out>    NextBrain Bayesian-Segmentation (333 ROIs, FreeSurfer-dev)
+
 DIAGNOSTIK / VALIDATION
   /fs-check                   Setup-Smoke-Test (Install, License, GPU, ...)
   /fs-outputs <sid>           Output-Validation (was wurde wirklich erzeugt?)
@@ -74,6 +77,11 @@ STATS / ANALYSIS
   fastsurfer-stats-parsing     .stats Format-Doku + Python-Parser-Recipes
                                (pandas DataFrames, Multi-Subject-Aggregation,
                                 Longitudinal-Tracking, eTIV-Normalisierung)
+
+ADJACENT-TOOLS (FreeSurfer-Ecosystem)
+  freesurfer-nextbrain-overview      Was NextBrain ist, 333 ROIs, Setup, Lizenz
+  freesurfer-nextbrain-cli           mri_histo_atlas_segment_fireants Flag-Referenz
+  freesurfer-nextbrain-vs-fastsurfer Decision-Guide: wann welches Tool, Kombi-Workflow
 ```
 
 ### Plugin-Verwaltung (claude-CLI)
@@ -111,6 +119,7 @@ Strip ggf. `fs-` prefix vom Arg. Mappe auf File:
 - `outputs` → commands/fs-outputs.md
 - `logs`    → commands/fs-logs.md
 - `stats`   → commands/fs-stats.md
+- `nextbrain` → commands/fs-nextbrain.md
 - `freeview` → commands/fs-freeview.md
 - `help`    → commands/fs-help.md (this file)
 

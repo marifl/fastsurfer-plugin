@@ -15,6 +15,29 @@ Format basiert auf [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), Ver
 
 ---
 
+## [0.4.0] — 2026-05-24
+
+### Added
+
+**Adjacent FreeSurfer-Ecosystem: NextBrain Integration**
+
+- **Skill `freesurfer-nextbrain-overview`** — Was NextBrain ist (Casamitjana et al. Nature 2025), 333 ROIs Histology-Atlas, Setup, Hardware-Requirements, Lizenz-Status, sequential dual-hemi Strategie.
+- **Skill `freesurfer-nextbrain-cli`** — Vollstaendige `mri_histo_atlas_segment_fireants` Flag-Referenz (5 Pflicht + 19 Optional), inkl. Memory-Tuning, FireANTs-Registration-Parameter, Custom-Label-Grouping via YAML, vollstaendige Beispiel-Aufrufe.
+- **Skill `freesurfer-nextbrain-vs-fastsurfer`** — Decision-Guide mit 18-Achsen-Vergleichstabelle, Decision-Flow, Kombi-Workflow (FastSurfer + NextBrain on-top), Wann-NICHT-Listen.
+- **Slash-Command `/fs-nextbrain`** — Run-Template mit auto-GPU-Detection, dual-hemi sequentiell, First-Run-Download-Hinweise, Memory-Tuning-Optionen, Output-Verification.
+
+### Changed
+
+- `plugin.json` description erweitert auf "FastSurfer und adjacent FreeSurfer-Ecosystem-Tools (NextBrain)".
+- `/fs-help` listet NextBrain-Skills + `/fs-nextbrain` Command.
+- Total jetzt: 21 Skills + 15 Slash-Commands.
+
+### Why?
+
+NextBrain (FreeSurfer-dev `mri_histo_util/mri_histo_atlas_segment_fireants`) ergaenzt FastSurfer um Hippocampus-Subfields, Brainstem-Nuclei, Thalamus-Subkerne und 200+ weitere Sub-Regionen — Use-Case-Adjacent fuer brain-app und andere neuroimaging-Pipelines. Outputs in tkRAS-Frame (gleich wie FastSurfer), daher direkt overlay-bar.
+
+---
+
 ## [0.3.0] — 2026-05-24
 
 ### Added
