@@ -37,7 +37,7 @@ done
 ## Aufruf-Pattern
 
 ```bash
-FASTSURFER_HOME="${FASTSURFER_HOME:-/Users/marcusifland/prj/fastsurfer}"
+FASTSURFER_HOME="${FASTSURFER_HOME:-$HOME/prj/fastsurfer}"
 
 "$FASTSURFER_HOME/long_fastsurfer.sh" \
   --tid <TEMPLATE_ID> \

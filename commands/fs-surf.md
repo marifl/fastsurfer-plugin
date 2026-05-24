@@ -31,7 +31,7 @@ Surface braucht `--fs_license`. Wenn User keine setzt → nach `$FS_LICENSE` env
 ## Aufruf-Pattern
 
 ```bash
-FASTSURFER_HOME="${FASTSURFER_HOME:-/Users/marcusifland/prj/fastsurfer}"
+FASTSURFER_HOME="${FASTSURFER_HOME:-$HOME/prj/fastsurfer}"
 
 "$FASTSURFER_HOME/run_fastsurfer.sh" \
   --sid <SID> \

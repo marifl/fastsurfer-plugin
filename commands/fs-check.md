@@ -12,7 +12,7 @@ Führe alle parallel aus, fasse Ergebnisse strukturiert zusammen.
 ### 1. FastSurfer-Repo
 
 ```bash
-FASTSURFER_HOME="${FASTSURFER_HOME:-/Users/marcusifland/prj/fastsurfer}"
+FASTSURFER_HOME="${FASTSURFER_HOME:-$HOME/prj/fastsurfer}"
 echo "FASTSURFER_HOME=$FASTSURFER_HOME"
 
 [ -d "$FASTSURFER_HOME" ] && echo "  [OK] Verzeichnis existiert" || echo "  [FAIL] Verzeichnis fehlt"

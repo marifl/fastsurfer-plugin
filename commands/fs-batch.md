@@ -37,7 +37,7 @@ Prüfe ob T1-Pfade in der Liste existieren (mindestens stichprobenartig).
 ## Aufruf-Pattern
 
 ```bash
-FASTSURFER_HOME="${FASTSURFER_HOME:-/Users/marcusifland/prj/fastsurfer}"
+FASTSURFER_HOME="${FASTSURFER_HOME:-$HOME/prj/fastsurfer}"
 
 "$FASTSURFER_HOME/brun_fastsurfer.sh" \
   --subject_list "$SUBJECT_LIST" \

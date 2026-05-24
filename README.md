@@ -48,7 +48,7 @@ Mit dem Plugin:
 
 ```bash
 # 1) Plugin installieren
-bash /Users/marcusifland/prj/fastsurfer-plugin/install.sh
+bash ~/prj/fastsurfer-plugin/install.sh
 
 # 2) Claude Code neu starten oder /reload-plugins
 
@@ -86,7 +86,7 @@ Bei Problemen:
 | Komponente | Version / Hinweis |
 |------------|-------------------|
 | **Claude Code** | aktuell (`claude --version` zeigt eine Version mit `plugin`-Subcommand) |
-| **FastSurfer-Repo** lokal verfügbar | Default-Pfad: `/Users/marcusifland/prj/fastsurfer` — anpassbar via `$FASTSURFER_HOME` env-var |
+| **FastSurfer-Repo** lokal verfügbar | Default-Pfad: `$HOME/prj/fastsurfer` — anpassbar via `$FASTSURFER_HOME` env-var |
 | **Git** | für `claude plugin marketplace add` |
 
 ### Pflicht für Surface-Pipeline
@@ -120,7 +120,7 @@ Bei Problemen:
 ### Automatisch via `install.sh` (empfohlen)
 
 ```bash
-cd /Users/marcusifland/prj/fastsurfer-plugin
+cd ~/prj/fastsurfer-plugin
 bash install.sh
 ```
 
@@ -155,7 +155,7 @@ bash install.sh --help
 Wenn du das Script nicht nutzen willst:
 
 ```
-/plugin marketplace add /Users/marcusifland/prj/fastsurfer-plugin
+/plugin marketplace add ~/prj/fastsurfer-plugin
 /plugin install fastsurfer@fastsurfer-dev
 ```
 
@@ -163,7 +163,7 @@ Danach `/reload-plugins` oder Claude Code neu starten.
 
 #### Mit `FASTSURFER_HOME` an einem anderen Pfad
 
-Wenn dein FastSurfer-Repo nicht unter `/Users/marcusifland/prj/fastsurfer` liegt:
+Wenn dein FastSurfer-Repo nicht unter `$HOME/prj/fastsurfer` liegt:
 
 ```bash
 export FASTSURFER_HOME=/path/to/your/fastsurfer
@@ -190,7 +190,7 @@ Die Slash-Commands (`/fs-run`, `/fs-seg`, etc.) lesen `$FASTSURFER_HOME` zur Lau
 ### Automatisch via `update.sh`
 
 ```bash
-cd /Users/marcusifland/prj/fastsurfer-plugin
+cd ~/prj/fastsurfer-plugin
 bash update.sh
 ```
 
@@ -260,7 +260,7 @@ Oder via Slash-Commands in Claude Code:
 /plugin marketplace remove fastsurfer-dev
 ```
 
-Das Plugin-Repo unter `/Users/marcusifland/prj/fastsurfer-plugin/` bleibt unberührt — du kannst es jederzeit erneut installieren.
+Das Plugin-Repo unter `~/prj/fastsurfer-plugin/` bleibt unberührt — du kannst es jederzeit erneut installieren.
 
 ---
 
@@ -555,7 +555,7 @@ Wenn leer: Claude Code ist nicht im PATH. Reinstall via `npm install -g @anthrop
 Symptom: `install.sh` bricht im Validation-Step ab.
 
 ```bash
-claude plugin validate /Users/marcusifland/prj/fastsurfer-plugin
+claude plugin validate ~/prj/fastsurfer-plugin
 ```
 
 zeigt die Detail-Fehler. Häufige Ursachen:
@@ -577,7 +577,7 @@ Du hast lokal das Plugin-Repo modifiziert (z.B. eigene Skills hinzugefügt). `up
 ```bash
 bash update.sh --no-pull    # nur Plugin-CLI-Update, kein git pull
 # ODER
-cd /Users/marcusifland/prj/fastsurfer-plugin && git stash && bash update.sh
+cd ~/prj/fastsurfer-plugin && git stash && bash update.sh
 ```
 
 ### Runtime
@@ -612,7 +612,7 @@ export FASTSURFER_HOME=/path/to/fastsurfer
 # Persistent in ~/.zshrc oder ~/.bashrc
 ```
 
-Slash-Commands fallen sonst auf den Default `/Users/marcusifland/prj/fastsurfer` zurück.
+Slash-Commands fallen sonst auf den Default `$HOME/prj/fastsurfer` zurück.
 
 ### FastSurfer selbst
 
@@ -678,7 +678,7 @@ Bei Updates wird dieser Cache neu befüllt.
 ```bash
 claude plugin uninstall fastsurfer
 claude plugin marketplace remove fastsurfer-dev
-rm -rf /Users/marcusifland/prj/fastsurfer-plugin     # nur wenn du das Repo nicht mehr willst
+rm -rf ~/prj/fastsurfer-plugin     # nur wenn du das Repo nicht mehr willst
 ```
 
 ---
@@ -704,7 +704,7 @@ rm -rf /Users/marcusifland/prj/fastsurfer-plugin     # nur wenn du das Repo nich
 3. Lokal validieren:
 
    ```bash
-   claude plugin validate /Users/marcusifland/prj/fastsurfer-plugin
+   claude plugin validate ~/prj/fastsurfer-plugin
    ```
 
 4. Plugin updaten:
@@ -761,7 +761,7 @@ Aktuell keine automatisierten Tests im Repo. Manuelle Validation-Steps:
 
 ```bash
 # Branch erstellen
-cd /Users/marcusifland/prj/fastsurfer-plugin
+cd ~/prj/fastsurfer-plugin
 git checkout -b feature/your-feature
 
 # Änderungen machen + committen

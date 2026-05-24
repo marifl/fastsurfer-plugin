@@ -110,7 +110,7 @@ Strip ggf. `fs-` prefix vom Arg. Mappe auf File:
 
 Lies die Datei via Read-Tool aus dem Plugin-Cache (Pfad typisch: `~/.claude/plugins/cache/fastsurfer-dev/fastsurfer/commands/fs-<name>.md`) und gib den vollen Inhalt formatiert aus.
 
-Wenn der Pfad nicht eindeutig ist: probiere zuerst Plugin-Cache-Pfad, fallback auf alternativen (z.B. /Users/marcusifland/prj/fastsurfer-plugin/commands/).
+Wenn der Pfad nicht eindeutig ist: probiere zuerst Plugin-Cache-Pfad, fallback auf alternativen (z.B. `${CLAUDE_PLUGIN_ROOT}/commands/` bzw. lokales `commands/`).
 
 Falls Command nicht existiert: liste verfuegbare Commands aus dem Full-Uebersicht-Modus.
 

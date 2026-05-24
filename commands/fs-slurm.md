@@ -26,7 +26,7 @@ sinfo -o "%P" 2>/dev/null
 ## Aufruf-Pattern (Data-Pattern-Mode)
 
 ```bash
-FASTSURFER_HOME="${FASTSURFER_HOME:-/Users/marcusifland/prj/fastsurfer}"
+FASTSURFER_HOME="${FASTSURFER_HOME:-$HOME/prj/fastsurfer}"
 
 "$FASTSURFER_HOME/srun_fastsurfer.sh" \
   --data "<data-root>" \

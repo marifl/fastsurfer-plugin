@@ -17,7 +17,7 @@ Wenn du nur die Whole-Brain-Segmentation + Cortex-Parcellation brauchst (95 Klas
 ## Aufruf-Pattern
 
 ```bash
-FASTSURFER_HOME="${FASTSURFER_HOME:-/Users/marcusifland/prj/fastsurfer}"
+FASTSURFER_HOME="${FASTSURFER_HOME:-$HOME/prj/fastsurfer}"
 
 "$FASTSURFER_HOME/run_fastsurfer.sh" \
   --t1 <absolute-T1-path> \

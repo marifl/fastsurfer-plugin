@@ -15,7 +15,7 @@ Starte nur die FastSurfer-Segmentation für $ARGUMENTS. Keine Surface-Pipeline.
 ## Aufruf-Pattern
 
 ```bash
-FASTSURFER_HOME="${FASTSURFER_HOME:-/Users/marcusifland/prj/fastsurfer}"
+FASTSURFER_HOME="${FASTSURFER_HOME:-$HOME/prj/fastsurfer}"
 
 "$FASTSURFER_HOME/run_fastsurfer.sh" \
   --t1 <absolute-T1-path> \

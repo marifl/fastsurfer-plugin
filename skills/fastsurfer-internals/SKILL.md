@@ -5,7 +5,7 @@ description: Use when the user wants to understand FastSurfer's code layout, whe
 
 # FastSurfer — Repository-Layout & Code-Internals
 
-Default-Annahme: FastSurfer lebt unter `$FASTSURFER_HOME` (z.B. `/Users/marcusifland/prj/fastsurfer`). Alle Pfade in diesem Skill sind **relativ** zum FastSurfer-Repo-Root.
+Default-Annahme: FastSurfer lebt unter `$FASTSURFER_HOME` (z.B. `~/prj/fastsurfer`). Alle Pfade in diesem Skill sind **relativ** zum FastSurfer-Repo-Root.
 
 ## Top-Level
 

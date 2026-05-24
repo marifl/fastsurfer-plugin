@@ -12,7 +12,7 @@ Erwartetes Pattern: erste zwei Args sind T1-Pfad und Subject-ID; optionale weite
 
 1. Prüfe FastSurfer-Repo-Verfügbarkeit:
    ```bash
-   FASTSURFER_HOME="${FASTSURFER_HOME:-/Users/marcusifland/prj/fastsurfer}"
+   FASTSURFER_HOME="${FASTSURFER_HOME:-$HOME/prj/fastsurfer}"
    [ -x "$FASTSURFER_HOME/run_fastsurfer.sh" ] && echo "OK: $FASTSURFER_HOME" || echo "MISSING: $FASTSURFER_HOME/run_fastsurfer.sh"
    ```
 
