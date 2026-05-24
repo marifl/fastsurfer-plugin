@@ -1,0 +1,21 @@
+{
+  "name": "fastsurfer",
+  "version": "0.1.0",
+  "description": "Vollständiges Claude-Code-Plugin für FastSurfer — Skills, Slash-Commands und Debugging-Workflows für die FastSurfer Deep-Learning-Neuroimaging-Pipeline (asegdkt, CerebNet, HypVINN, Corpus Callosum, recon-surf).",
+  "author": {
+    "name": "Marcus Ifland",
+    "email": "marcus@banfa.studio"
+  },
+  "keywords": [
+    "fastsurfer",
+    "freesurfer",
+    "neuroimaging",
+    "mri",
+    "brain-segmentation",
+    "cortex",
+    "deep-learning"
+  ],
+  "license": "Apache-2.0",
+  "skills": "./skills",
+  "commands": "./commands"
+}

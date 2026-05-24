@@ -1,0 +1,16 @@
+{
+  "name": "fastsurfer-dev",
+  "owner": {
+    "name": "Marcus Ifland",
+    "email": "marcus@banfa.studio"
+  },
+  "description": "Lokales Dev-Marketplace für das fastsurfer-Plugin.",
+  "plugins": [
+    {
+      "name": "fastsurfer",
+      "source": "./",
+      "description": "Vollständiges FastSurfer-Plugin für Claude Code.",
+      "version": "0.1.0"
+    }
+  ]
+}
