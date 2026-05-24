@@ -20,21 +20,70 @@ Das Plugin verschafft Claude umfassendes operationales Verständnis aller FastSu
 
 ## Installation
 
-### Als lokales Dev-Plugin
+### Automatisch via `install.sh` (empfohlen)
 
 ```bash
-# In Claude Code:
+cd /Users/marcusifland/prj/fastsurfer-plugin
+bash install.sh
+```
+
+Das Script:
+
+1. Prüft `claude` CLI + `git` Verfügbarkeit
+2. Validiert die Plugin- und Marketplace-Manifeste via `claude plugin validate`
+3. Registriert den Marketplace via `claude plugin marketplace add`
+4. Installiert das Plugin via `claude plugin install fastsurfer@fastsurfer-dev`
+5. Verifiziert die Installation via `claude plugin list`
+
+Optionen:
+
+```bash
+bash install.sh --scope user      # Default: ~/.claude/settings.json
+bash install.sh --scope project   # Nur für das aktuelle Projekt-Repo
+bash install.sh --scope local     # Per-Maschine-Override (nicht committed)
+bash install.sh --force           # Skip Confirmations + re-install
+bash install.sh --help
+```
+
+**Wichtig:** Das Script editiert NICHT manuell in `~/.claude/settings.json`. Alle Änderungen laufen über die offizielle `claude plugin` CLI.
+
+### Update via `update.sh`
+
+```bash
+cd /Users/marcusifland/prj/fastsurfer-plugin
+bash update.sh
+```
+
+Das Script:
+
+1. `git pull --ff-only` (wenn Remote vorhanden; skip mit `--no-pull`)
+2. Validiert Manifeste neu
+3. Refresht den Marketplace via `claude plugin marketplace update`
+4. Updated das Plugin via `claude plugin update`
+
+### Manuell (alternativ, in einer Claude-Code-Session)
+
+```
 /plugin marketplace add /Users/marcusifland/prj/fastsurfer-plugin
 /plugin install fastsurfer@fastsurfer-dev
-# Danach Claude Code neu starten
 ```
 
 ### Verifikation
 
+Nach Install/Update in Claude Code:
+
+```
+/reload-plugins        # bzw. Claude Code neu starten
+/fs-check              # Smoke-Test der Installation
+```
+
+`/plugin` listet alle installierten Plugins (sollte `fastsurfer` enthalten).
+
+### Uninstall
+
 ```bash
-# In Claude Code:
-/plugin           # zeigt "fastsurfer" als installiertes Plugin
-/fs-check         # Slash-Command läuft Install-Smoke-Test
+claude plugin uninstall fastsurfer
+claude plugin marketplace remove fastsurfer-dev
 ```
 
 ## Skills (auto-trigger bei passendem Kontext)
