@@ -26,7 +26,7 @@ Das Plugin verschafft Claude umfassendes operationales Verständnis aller FastSu
 - [Troubleshooting](#troubleshooting)
 - [FAQ](#faq)
 - [Entwicklung & Beitragen](#entwicklung--beitragen)
-- [Referenzen](#referenzen)
+- [Wissenschaftliche Referenzen](#wissenschaftliche-referenzen)
 - [Lizenz](#lizenz)
 
 ---
@@ -806,36 +806,32 @@ git push          # Push der Commits
 
 ---
 
-## Referenzen
+## Wissenschaftliche Referenzen
 
-### FastSurfer
+Vollständige bibliographische Quellen aller im Plugin behandelten Tools: siehe **[REFERENCES.md](REFERENCES.md)**.
 
-- **Repo:** https://github.com/Deep-MI/FastSurfer
-- **Docs:** https://deep-mi.org/FastSurfer/
-- **Singularity-Docs:** https://github.com/Deep-MI/FastSurfer/blob/stable/doc/overview/SINGULARITY.md
-- **Docker-Hub:** https://hub.docker.com/r/deepmi/fastsurfer
+BibTeX-Einträge: siehe **[CITATIONS.bib](CITATIONS.bib)**.
 
-### Papers
+### Wer in eigener Publikation zitieren?
 
-- **FastSurfer (original):** Henschel L, Conjeti S, Estrada S, Diers K, Fischl B, Reuter M. *FastSurfer — A fast and accurate deep learning based neuroimaging pipeline.* NeuroImage 219 (2020), 117012. https://doi.org/10.1016/j.neuroimage.2020.117012
-- **FastSurferVINN:** Henschel L\*, Kuegler D\*, Reuter M. *FastSurferVINN: Building Resolution-Independence into Deep Learning Segmentation Methods — A Solution for HighRes Brain MRI.* NeuroImage 251 (2022), 118933. http://dx.doi.org/10.1016/j.neuroimage.2022.118933
-- **CerebNet:** Faber J\*, Kuegler D\*, Bahrami E\*, et al. *CerebNet: A fast and reliable deep-learning pipeline for detailed cerebellum sub-segmentation.* NeuroImage 264 (2022), 119703. https://doi.org/10.1016/j.neuroimage.2022.119703
-- **HypVINN:** Estrada S, Kuegler D, Bahrami E, Xu P, Mousa D, Breteler MMB, Aziz NA, Reuter M. *FastSurfer-HypVINN: Automated sub-segmentation of the hypothalamus and adjacent structures on high-resolutional brain MRI.* Imaging Neuroscience 2023; 1 1–32. https://doi.org/10.1162/imag_a_00034
-- **FastSurfer-CC:** Pollak C, Diers K, Estrada S, Kuegler D, Reuter M. *FastSurfer-CC: A robust, accurate, and comprehensive framework for corpus callosum morphometry.* arXiv:2511.16471. https://doi.org/10.48550/arXiv.2511.16471
-- **Longitudinal:** Reuter M, Schmansky NJ, Rosas HD, Fischl B. *Within-subject template estimation for unbiased longitudinal image analysis.* NeuroImage 61:4 (2012). https://doi.org/10.1016/j.neuroimage.2012.02.084
+- **FastSurfer:** Henschel et al., NeuroImage 2020 + Henschel/Kuegler/Reuter, NeuroImage 2022 (+ modul-spezifische Papers für CerebNet/HypVINN/CC/Longitudinal). Surface-Pipeline zusätzlich Fischl 2012 + Dale/Fischl/Sereno 1999.
+- **NextBrain:** Casamitjana et al., Nature 2025 + Puonti et al., Imaging Neuroscience 2026.
+- **Plugin selbst:** nicht notwendig (Tooling-Hilfe, kein wissenschaftlicher Beitrag).
 
-### FreeSurfer
+Vollständige How-to-cite-Anleitung mit Pflicht/Optional-Listen in [REFERENCES.md → Wie zitieren?](REFERENCES.md#wie-zitieren).
 
-- **Website:** https://freesurfer.net/
-- **Lizenz registrieren:** https://surfer.nmr.mgh.harvard.edu/registration.html
-- **FreeView-Guide:** https://surfer.nmr.mgh.harvard.edu/fswiki/FreeviewGuide
+### Wichtigste Software-Links
 
-### Claude Code
-
-- **Plugin-Docs:** https://docs.claude.com/en/docs/claude-code/plugins
-- **Plugin-Reference:** https://docs.claude.com/en/docs/claude-code/plugins-reference
-- **Marketplace-Docs:** https://docs.claude.com/en/docs/claude-code/plugin-marketplaces
-- **Setup:** https://docs.claude.com/en/docs/claude-code/setup
+| Tool | Link |
+|------|------|
+| **FastSurfer** | https://github.com/Deep-MI/FastSurfer |
+| **FastSurfer Docs** | https://deep-mi.org/FastSurfer/ |
+| **FastSurfer Docker** | https://hub.docker.com/r/deepmi/fastsurfer |
+| **FreeSurfer** | https://freesurfer.net/ |
+| **FreeSurfer Lizenz** | https://surfer.nmr.mgh.harvard.edu/registration.html |
+| **NextBrain Project** | https://github-pages.ucl.ac.uk/NextBrain |
+| **NextBrain Wiki** | https://surfer.nmr.mgh.harvard.edu/fswiki/HistoAtlasSegmentation |
+| **Claude Code Plugin Docs** | https://docs.claude.com/en/docs/claude-code/plugins |
 
 ---
 

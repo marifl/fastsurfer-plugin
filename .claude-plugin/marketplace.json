@@ -10,8 +10,8 @@
       "name": "fastsurfer",
       "source": "./",
       "description": "Vollständiges Plugin für FastSurfer und adjacent FreeSurfer-Ecosystem-Tools (NextBrain). 333+95 ROIs Coverage.",
-      "version": "0.4.0"
+      "version": "0.4.1"
     }
   ],
-  "version": "0.4.0"
+  "version": "0.4.1"
 }

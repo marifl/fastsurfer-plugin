@@ -1,6 +1,6 @@
 {
   "name": "fastsurfer",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Vollständiges Claude-Code-Plugin für FastSurfer und adjacent FreeSurfer-Ecosystem-Tools (NextBrain). Skills, Slash-Commands und Debugging-Workflows für die FastSurfer Deep-Learning-Neuroimaging-Pipeline (asegdkt, CerebNet, HypVINN, Corpus Callosum, recon-surf) sowie NextBrain Bayesian-Segmentation (333 ROIs).",
   "author": {
     "name": "Marcus Ifland",

@@ -15,6 +15,27 @@ Format basiert auf [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), Ver
 
 ---
 
+## [0.4.1] — 2026-05-24
+
+### Added
+
+- **`CITATIONS.bib`** — Vollständige BibTeX-Einträge aller im Plugin referenzierten Publikationen (FastSurfer-Module, NextBrain-Stack, FreeSurfer-Foundation, Reference-Datasets, Software-Repos). Format: BibLaTeX-kompatibel.
+- **`REFERENCES.md`** — Konsolidierte wissenschaftliche Referenz-Doku mit:
+  - Vollständigen Autor-Listen, Journal-Bibliographie, DOIs
+  - Strukturierung nach Tool/Modul (FastSurfer-Pipeline, NextBrain, FreeSurfer-Foundation, Reference-Datasets)
+  - **"Wie zitieren?"-Sektion** mit Pflicht-/Optional-Citation-Listen für FastSurfer- und NextBrain-Workflows
+
+### Changed
+
+- README "Referenzen"-Sektion → "Wissenschaftliche Referenzen", verweist zentral auf REFERENCES.md und CITATIONS.bib (Single Source of Truth statt Inline-Duplikat).
+- Inhaltsverzeichnis-Eintrag entsprechend angepasst.
+
+### Why?
+
+User-Feedback: "bitte noch sauber und wissenschaftlich referenzieren". Vorher waren Citations inline in README + Skills mit inkonsistentem Format (mal mit DOI, mal nur URL, mal nur Erstautor). Jetzt: ein zentraler Ort für alle Quellen, BibTeX-export für akademische User, klare How-to-cite-Anleitung.
+
+---
+
 ## [0.4.0] — 2026-05-24
 
 ### Added
