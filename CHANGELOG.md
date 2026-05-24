@@ -15,6 +15,33 @@ Format basiert auf [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), Ver
 
 ---
 
+## [0.4.2] — 2026-05-24
+
+### Added
+
+- **Danksagung & Upstream-Projekte** als prominente eigene Sektion im README (direkt nach Inhaltsverzeichnis). Dankt explizit:
+  - **Deep-MI Lab / DZNE** (FastSurfer) — Martin Reuter + Team, mit namentlicher Nennung der (Co-)Erstautoren der Hauptpublikationen (Henschel, Kuegler, Estrada, Faber, Bahrami, Pollak, Diers)
+  - **Laboratory for Computational Neuroimaging, MGH** (FreeSurfer) — Bruce Fischl + Team, inkl. Dale, Sereno, Desikan, Klein, Tourville
+  - **UCL CMIC + MGH Martinos Center** (NextBrain) — Juan Eugenio Iglesias, Adria Casamitjana, Oula Puonti, Matteo Mancini und gesamtes BUNGEE-TOOLS-Team
+  - Foundation-Modelle (BrainFM/Liu, FireANTs/Jena) + Tooling-Ecosystem (PyTorch, nibabel, etc.)
+- **Direkte Repository-Links** zu allen Upstream-Quellen in der Danksagung (nicht versteckt in Footnotes).
+- **Issue-Tracker-Link** im Disclaimer fuer Korrekturen / Verbesserungen.
+
+### Changed
+
+- README-Hero-Block: Disclaimer-Banner unter Badges hinzugefuegt mit Verweis auf Danksagung + Referenzen.
+- README-Inhaltsverzeichnis erweitert um "Danksagung & Upstream-Projekte" als ersten Eintrag.
+- **Lizenz-Sektion** strukturiert: Tabelle mit Lizenz-Status pro Komponente (Plugin / FastSurfer / FreeSurfer / NextBrain) + expliziter Hinweis zur kommerziellen-Nutzung-Frage.
+- Footer-Disclaimer erweitert: explizite Nennung aller Upstream-Teams (Deep-MI/DZNE, FreeSurfer/MGH, UCL/NextBrain), Issue-Link, Anpassungs-Anbot fuer Upstream-Teams.
+- Component-Badge auf aktuelle Counts aktualisiert (21 Skills + 15 Commands; war veraltet auf 16+12).
+- NextBrain-Status-Badge im Hero hinzugefuegt.
+
+### Why?
+
+User-Feedback: "so eine Danksagung und Repoverlinkung sollte man anstandshalber in der README.md machen". Open-Source-Etikette gegenueber den Upstream-Teams: das Plugin ist eine Tooling-Hilfe rund um die jahrelange wissenschaftliche und Engineering-Arbeit anderer Teams. Diese Arbeit gehoert sichtbar gewuerdigt, nicht nur in einer Referenz-Liste am Ende versteckt.
+
+---
+
 ## [0.4.1] — 2026-05-24
 
 ### Added

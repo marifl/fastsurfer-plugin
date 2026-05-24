@@ -4,13 +4,18 @@
 
 Das Plugin verschafft Claude umfassendes operationales Verständnis aller FastSurfer-Komponenten und bietet kuratierte Slash-Commands für die typischen Workflows.
 
-[![Plugin: 16 Skills + 12 Commands](https://img.shields.io/badge/components-16%20skills%20%2B%2012%20commands-blue)](#-components)
+[![Plugin: 21 Skills + 15 Commands](https://img.shields.io/badge/components-21%20skills%20%2B%2015%20commands-blue)](#-components)
 [![FastSurfer 2.6.0-dev](https://img.shields.io/badge/fastsurfer-2.6.0--dev-green)](#-versions--kompatibilit%C3%A4t)
+[![NextBrain](https://img.shields.io/badge/nextbrain-integrated-purple)](#-components)
 [![Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-orange)](LICENSE)
+
+> **Dieses Plugin ist ein inoffizielles Tooling rund um die Arbeit anderer.** Die gesamte wissenschaftliche und Engineering-Leistung liegt bei den unten genannten Upstream-Projekten. Siehe [Danksagung](#danksagung--upstream-projekte) und [Wissenschaftliche Referenzen](#wissenschaftliche-referenzen).
 
 ---
 
 ## Inhaltsverzeichnis
+
+- [Danksagung & Upstream-Projekte](#danksagung--upstream-projekte)
 
 - [Warum dieses Plugin?](#warum-dieses-plugin)
 - [Quick-Start (in 3 Minuten)](#quick-start-in-3-minuten)
@@ -28,6 +33,58 @@ Das Plugin verschafft Claude umfassendes operationales Verständnis aller FastSu
 - [Entwicklung & Beitragen](#entwicklung--beitragen)
 - [Wissenschaftliche Referenzen](#wissenschaftliche-referenzen)
 - [Lizenz](#lizenz)
+
+---
+
+## Danksagung & Upstream-Projekte
+
+Dieses Plugin ist eine reine Tooling-Hilfe und wäre ohne die Arbeit der folgenden Teams und Projekte nicht möglich. **Aller wissenschaftlicher Kredit gebührt diesen Quellen**, nicht diesem Plugin.
+
+### FastSurfer
+
+> Entwickelt von der **[Deep-MI](https://deep-mi.org/) Lab** am **Deutschen Zentrum für Neurodegenerative Erkrankungen (DZNE)** unter Leitung von **Martin Reuter** und Team.
+>
+> Repository: **https://github.com/Deep-MI/FastSurfer**
+> Dokumentation: **https://deep-mi.org/FastSurfer/**
+> Lizenz: Apache-2.0
+>
+> Mein Dank gilt insbesondere den (Co-)Erstautoren der zentralen Veröffentlichungen — **Leonie Henschel**, **David Kügler**, **Santiago Estrada**, **Jennifer Faber**, **Emad Bahrami**, **Clemens Pollak**, **Kersten Diers** — sowie allen weiteren Beitragenden auf [GitHub](https://github.com/Deep-MI/FastSurfer/graphs/contributors).
+
+### FreeSurfer
+
+> Entwickelt am **[Laboratory for Computational Neuroimaging (LCN)](https://lcn.martinos.org/)** des **Martinos Center, Massachusetts General Hospital / Harvard Medical School** unter Leitung von **Bruce Fischl** und Team.
+>
+> Repository: **https://github.com/freesurfer/freesurfer**
+> Website: **https://freesurfer.net/**
+> Lizenz: Non-Commercial ([Details](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferSoftwareLicense))
+>
+> FreeSurfer ist die Foundation, auf der FastSurfer's Surface-Pipeline aufbaut, und beherbergt NextBrain im `dev`-Branch. Mein Dank gilt **Bruce Fischl**, **Anders Dale**, **Martin Sereno**, **Rahul Desikan**, **Arno Klein**, **Jason Tourville** und allen anderen Beitragenden über die letzten 25+ Jahre Pionierarbeit in der MRT-basierten Hirnsegmentierung.
+
+### NextBrain
+
+> Entwickelt am **[Centre for Medical Image Computing (CMIC), University College London (UCL)](https://www.ucl.ac.uk/medical-image-computing/)** und am **Martinos Center, MGH** unter Leitung von **Juan Eugenio Iglesias**, mit dem Team von **Adria Casamitjana**, **Oula Puonti**, **Matteo Mancini** und Kollaborateuren.
+>
+> Projekt-Homepage: **https://github-pages.ucl.ac.uk/NextBrain/**
+> Source-Code (in FreeSurfer-dev): **https://github.com/freesurfer/freesurfer/tree/dev/mri_histo_util**
+> FreeSurfer-Wiki: **https://surfer.nmr.mgh.harvard.edu/fswiki/HistoAtlasSegmentation**
+> Finanzierung: ERC Starting Grant 677697 (BUNGEE-TOOLS)
+> Lizenz: Non-Commercial (Teil von FreeSurfer)
+>
+> Mein Dank gilt dem **gesamten NextBrain/BUNGEE-TOOLS-Team** für die ausserordentlich gründliche Histology-Annotation von über 300 Hirnregionen über fünf menschliche Hemispheren — eine fundamentale wissenschaftliche Ressource, die der Community Open-Source zur Verfügung gestellt wurde.
+
+### Foundation-Modelle & Methoden im NextBrain-Stack
+
+- **BrainFM** (Modality-agnostic Foundation Model) — Peirong Liu et al.
+- **FireANTs** (Diffeomorphic Registration) — Rohit Jena et al., University of Pennsylvania
+- **Casamitjana et al., Nature 2025** (NextBrain Atlas)
+- **Puonti et al., Imaging Neuroscience 2026** (Fast-Inference)
+
+Vollständige bibliographische Quellen mit DOIs siehe [REFERENCES.md](REFERENCES.md). BibTeX-Einträge in [CITATIONS.bib](CITATIONS.bib).
+
+### Tooling-Ecosystem
+
+- **Claude Code** ([Anthropic](https://docs.claude.com/en/docs/claude-code)) — Plattform für dieses Plugin.
+- **PyTorch**, **nibabel**, **NumPy**, **MONAI**, **lapy**, **meshpy**, **neuroreg**, **scikit-image** — die scientific-Python-Stack, auf der FastSurfer technisch aufbaut.
 
 ---
 
@@ -837,18 +894,31 @@ Vollständige How-to-cite-Anleitung mit Pflicht/Optional-Listen in [REFERENCES.m
 
 ## Lizenz
 
-**Apache-2.0** (siehe [LICENSE](LICENSE)).
+**Apache-2.0** für das Plugin selbst (siehe [LICENSE](LICENSE)).
 
-Dieses Plugin wrappt und dokumentiert FastSurfer (ebenfalls Apache-2.0). FastSurfer selbst nutzt FreeSurfer-Binaries für die Surface-Pipeline — FreeSurfer hat eine eigene Non-Commercial-Lizenz, siehe https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferSoftwareLicense.
+Lizenz-Status der gewrappten Tools (zwingend zu beachten):
+
+| Komponente | Lizenz | Implikation |
+|------------|--------|-------------|
+| **fastsurfer-plugin** (dieses Repo) | Apache-2.0 | freie Nutzung inkl. kommerziell |
+| **FastSurfer** | Apache-2.0 | freie Nutzung |
+| **FreeSurfer** | Non-Commercial ([Details](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferSoftwareLicense)) | kommerzielle Nutzung erfordert separate Lizenz |
+| **NextBrain** (in FreeSurfer-dev) | Non-Commercial (Teil FreeSurfer) | wie FreeSurfer |
+
+Wenn du FastSurfer's Surface-Pipeline oder NextBrain in einem kommerziellen Kontext nutzen willst, ist die FreeSurfer-Lizenzlage zwingend zu prüfen.
 
 ---
 
 ## Autor
 
-**Marcus Ifland** — `marcus@banfa.studio`
+**Marcus Ifland** — `marcus@banfa.studio` — [GitHub: @marifl](https://github.com/marifl)
 
 Plugin entwickelt im Rahmen der Arbeit am SS26 Modul "Kognitive Neurowissenschaften" für eine interaktive Hirn-Visualisierungs-App (brain-app).
 
 ---
 
-> **Hinweis:** Dieses Plugin wurde mit hoher Sorgfalt gegen die FastSurfer 2.6.0-dev Repo-Quelle erstellt, ist aber nicht offiziell von Deep-MI / dem FastSurfer-Team endorsed.
+> **Disclaimer:** Dieses Plugin wurde mit hoher Sorgfalt gegen die FastSurfer 2.6.0-dev und FreeSurfer-dev (NextBrain) Repo-Quellen erstellt, ist jedoch **nicht offiziell** von Deep-MI / DZNE, dem FreeSurfer-Team / MGH oder der UCL-/NextBrain-Gruppe endorsed.
+>
+> Bei Fragen, Korrekturen oder Verbesserungswünschen bitte ein [Issue](https://github.com/marifl/fastsurfer-plugin/issues) öffnen.
+>
+> Falls Mitglieder eines der oben genannten Upstream-Teams Anpassungen an Beschreibungen, Zitationen oder Lizenz-Hinweisen dieses Plugins wünschen: bitte gerne ein Issue oder direkt eine Mail an `marcus@banfa.studio`.
