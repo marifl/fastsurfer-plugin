@@ -33,6 +33,7 @@ DIAGNOSTIK / VALIDATION
   /fs-check                   Setup-Smoke-Test (Install, License, GPU, ...)
   /fs-outputs <sid>           Output-Validation (was wurde wirklich erzeugt?)
   /fs-logs <sid>              Tail deep-seg.log + recon-all.log
+  /fs-stats <sid>             Stats-Files lesen, vergleichen, CSV-exportieren
   /fs-freeview <sid>          Oeffne FreeView mit Subject
 
 META
@@ -68,7 +69,11 @@ DEBUG
 
 3D / COORDS
   fastsurfer-coordinates-3d    Scanner-RAS / tkRAS / LIA / Three.js Y-up / Blender Z-up
-                               (siehe /fs-help coordinates-3d)
+
+STATS / ANALYSIS
+  fastsurfer-stats-parsing     .stats Format-Doku + Python-Parser-Recipes
+                               (pandas DataFrames, Multi-Subject-Aggregation,
+                                Longitudinal-Tracking, eTIV-Normalisierung)
 ```
 
 ### Plugin-Verwaltung (claude-CLI)
@@ -105,6 +110,7 @@ Strip ggf. `fs-` prefix vom Arg. Mappe auf File:
 - `check`   → commands/fs-check.md
 - `outputs` → commands/fs-outputs.md
 - `logs`    → commands/fs-logs.md
+- `stats`   → commands/fs-stats.md
 - `freeview` → commands/fs-freeview.md
 - `help`    → commands/fs-help.md (this file)
 

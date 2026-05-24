@@ -11,7 +11,26 @@ Format basiert auf [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), Ver
 ### Coming up
 
 - Browser-Smoke nach echter Installation
-- ggf. GitHub-Push und public Marketplace
+- ggf. brain-app-Integration-Skill
+
+---
+
+## [0.3.0] — 2026-05-24
+
+### Added
+
+- **Skill `fastsurfer-stats-parsing`** — Vollstaendige Doku des FreeSurfer `.stats`-Formats (Header-Measures + Tabular-Data + ColHeaders). Python-Parser-Recipes fuer pandas-DataFrame-Conversion, Multi-Subject-Aggregation, eTIV-Normalisierung, Longitudinal-Trajectories, Excel/JSON-Export, FreeSurfer-LUT-Parsing. Plus Pitfalls und Default-ColHeaders-Fallback.
+- **Slash-Command `/fs-stats`** — Liest/druckt/vergleicht/exportiert Stats-Files:
+  - `/fs-stats <sid>` — Liste + aseg-Hauptmeasures
+  - `/fs-stats <sid> <file>` — Pretty-Print (mit pandas-DataFrame fuer Tabular)
+  - `/fs-stats <sid> --compare <sid2>` — Side-by-Side Vergleich
+  - `/fs-stats <sid> --measure <name>` — Grep nach Measure (z.B. Hippocampus)
+  - `/fs-stats <sid> --export-csv <path>` — Flat-CSV fuer pandas/R
+  - `/fs-stats <sid> --list` — nur Filenames
+
+### Changed
+
+- `/fs-help` listet jetzt `/fs-stats` und Skill `fastsurfer-stats-parsing`.
 
 ---
 
